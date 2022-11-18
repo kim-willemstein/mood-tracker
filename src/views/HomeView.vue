@@ -1,9 +1,10 @@
 <script setup>
 import {ref, onMounted, computed} from "vue";
 const data = ref();
+const key = import.meta.env.VITE_OURA_API_KEY;
 
 function fetchData() {
-  return fetch('https://api.ouraring.com/v1/readiness?access_token=4NEDVOR74O626DUGSG4AQKM42NV44Z6V', {
+  return fetch('https://api.ouraring.com/v1/readiness?access_token=' + key, {
     method: 'get',
   })
       .then(response => {
@@ -28,7 +29,7 @@ const calculateScore = computed(() => {
     return 'kinda meh'
   } else if (data.value > 50){
     return 'dead'
-  } else;
+  } else {}
 })
 
 onMounted(() => {
@@ -41,8 +42,6 @@ onMounted(() => {
     Today i'm feeling {{ calculateScore }}
     <br><br>
     Readiness score: {{ data }}
-<!--    <small>-->
-<!--      <br>-->
-<!--      batterij tonen? Leuk als stukje art in rive animatie</small>-->
+    <br>
   </div>
 </template>

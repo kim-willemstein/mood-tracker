@@ -1,4 +1,4 @@
-# mood-tracker
+# Readiness-tracker
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -9,6 +9,10 @@ This template should help get you started developing with Vue 3 in Vite.
 ## Customize configuration
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Preview app
+
+https://lighthearted-chebakia-db80cb.netlify.app/
 
 ## Project Setup
 
