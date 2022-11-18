@@ -41,8 +41,8 @@ onMounted(() => {
     Today i'm feeling {{ calculateScore }}
     <br><br>
     Readiness score: {{ data }}
-    <small>
-      <br>
+<!--    <small>-->
+<!--      <br>-->
 <!--      batterij tonen? Leuk als stukje art in rive animatie</small>-->
   </div>
 </template>
