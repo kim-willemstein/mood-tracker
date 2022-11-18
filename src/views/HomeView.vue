@@ -43,6 +43,6 @@ onMounted(() => {
     Readiness score: {{ data }}
     <small>
       <br>
-      batterij tonen? Leuk als stukje art in rive animatie</small>
+<!--      batterij tonen? Leuk als stukje art in rive animatie</small>-->
   </div>
 </template>
