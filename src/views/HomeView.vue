@@ -6,6 +6,7 @@ const key = import.meta.env.VITE_OURA_API_KEY;
 function fetchData() {
   return fetch('https://api.ouraring.com/v1/readiness?access_token=' + key, {
     method: 'get',
+    // headers: { 'Content-Type': 'application/json' }
   })
       .then(response => {
         if (!response.ok) {
@@ -16,7 +17,9 @@ function fetchData() {
         return response.json();
       })
       .then(response => {
-        data.value = response.readiness[5].score;
+        let readiness = response.readiness
+        let lastValue = readiness[Object.keys(readiness)[Object.keys(readiness).length - 1]]
+        data.value = lastValue.score;
       })
 }
 
